@@ -16,8 +16,6 @@ export default async function Home() {
     <div className={`island-page min-h-screen ${manrope.className}`}>
       <section className="island-hero relative flex min-h-[78vh] items-center overflow-hidden px-4 py-24 sm:px-6 md:min-h-[84vh] md:py-32">
         <div className="island-blob island-blob-sun" aria-hidden="true" />
-        <div className="island-blob island-blob-palm" aria-hidden="true" />
-        <div className="island-blob island-blob-reef" aria-hidden="true" />
         <div className="island-blob island-blob-wave" aria-hidden="true" />
         <div className="mx-auto max-w-6xl">
           <div className="island-fade-up text-center">
