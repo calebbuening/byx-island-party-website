@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -11,8 +12,17 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-white">
-            THE BYX BOARD
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/images/byx-logo.png"
+              alt="Island Party"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full"
+            />
+            <span className="text-lg font-extrabold tracking-tight text-white sm:text-xl">
+              Island Party
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,7 +48,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Link
               href="/tickets"
-              className="bg-cyan-700 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+              className="island-btn island-btn-primary !py-2 !px-5 !text-sm"
             >
               Get Tickets
             </Link>

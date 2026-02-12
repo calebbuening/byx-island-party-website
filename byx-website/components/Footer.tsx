@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -9,9 +10,18 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">BYX</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image
+                src="/images/byx-logo.png"
+                alt="Island Party"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full"
+              />
+              <h3 className="text-xl font-bold">Island Party</h3>
+            </div>
             <p className="text-cyan-100">
-              Brothers Under Christ - Building brotherhood centered on faith.
+              A BYX event - Brothers Under Christ building brotherhood centered on faith.
             </p>
           </div>
 
