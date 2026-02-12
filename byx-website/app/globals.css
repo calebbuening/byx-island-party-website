@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --island-sea-deep: #0b3a53;
+  --island-sea: #1498b4;
+  --island-sand: #fdf3cc;
+  --island-sunset: #ffab4f;
+}
+
+.island-page {
+  background: var(--island-sea-deep);
+}
+
+.island-hero {
+  background:
+    radial-gradient(circle at 20% -15%, rgba(255, 216, 117, 0.24) 0%, transparent 34%),
+    linear-gradient(165deg, #2eabc7 0%, #61daef 38%, #2f97b6 66%, var(--island-sea-deep) 100%);
+}
+
+.island-blob {
+  pointer-events: none;
+  position: absolute;
+  filter: blur(1px);
+}
+
+.island-blob-sun {
+  top: -4rem;
+  right: -3rem;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, #ffd875 0%, var(--island-sunset) 70%, transparent 75%);
+  opacity: 0.75;
+}
+
+.island-blob-wave {
+  left: 0;
+  right: 0;
+  bottom: -0.125rem;
+  height: 12rem;
+  border-radius: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(122, 234, 249, 0.32) 0%,
+    rgba(66, 169, 196, 0.34) 38%,
+    rgba(11, 58, 83, 0.76) 78%,
+    var(--island-sea-deep) 100%
+  );
+  filter: none;
+}
+
+.island-btn {
+  border-radius: 9999px;
+  padding: 0.78rem 1.5rem;
+  font-weight: 800;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.island-btn:hover {
+  transform: translateY(-2px);
+}
+
+.island-btn-primary {
+  background: linear-gradient(135deg, #ffb54c 0%, #ff7f4f 100%);
+  color: #1f2937;
+  box-shadow: 0 10px 30px rgba(255, 133, 79, 0.35);
+}
+
+.island-btn-primary:hover {
+  box-shadow: 0 14px 36px rgba(255, 133, 79, 0.45);
+}
+
+.island-btn-secondary {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #f8fdff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.island-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.island-card {
+  display: block;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(105, 182, 205, 0.3);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 14px 35px rgba(9, 61, 88, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.island-card:hover {
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: 0 20px 45px rgba(9, 61, 88, 0.2);
+}
+
+.island-fade-up {
+  animation: island-fade-up 720ms ease-out both;
+}
+
+.island-content-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% -15%, rgba(255, 216, 117, 0.2) 0%, transparent 35%),
+    linear-gradient(180deg, #5ad4ea 0%, #2ea6c6 45%, #0b3a53 100%);
+}
+
+.island-content-container {
+  margin: 0 auto;
+  max-width: 64rem;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(143, 220, 236, 0.5);
+  background: rgba(235, 251, 255, 0.9);
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 22px 50px rgba(6, 37, 53, 0.25);
+}
+
+.island-content-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(122, 205, 224, 0.45);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.island-link {
+  color: #0c5d7d;
+  font-weight: 700;
+}
+
+.island-link:hover {
+  text-decoration: underline;
+}
+
+.island-input {
+  width: 100%;
+  border-radius: 0.65rem;
+  border: 1px solid #a9d7e2;
+  background: #ffffff;
+  padding: 0.55rem 1rem;
+  color: #0f172a;
+}
+
+.island-input:focus {
+  outline: none;
+  border-color: #1892b0;
+  box-shadow: 0 0 0 2px rgba(24, 146, 176, 0.24);
+}
+
+.island-form-btn {
+  width: 100%;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #ffb54c 0%, #ff7f4f 100%);
+  color: #17202a;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+  transition: filter 180ms ease;
+}
+
+.island-form-btn:hover {
+  filter: brightness(1.04);
+}
+
+.island-form-btn:disabled {
+  background: #9ca3af;
+  color: #f8fafc;
+}
+
+@keyframes island-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
