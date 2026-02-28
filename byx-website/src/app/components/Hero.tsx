@@ -72,29 +72,37 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-24 pb-16">
-        {/* Headline */}
-        <h1
-          className="text-7xl sm:text-8xl lg:text-[10rem] text-[#f5f0e8] leading-none tracking-wide mb-2"
-          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: "0 2px 24px rgba(26,20,3,0.8), 0 1px 4px rgba(26,20,3,0.9)" }}
+        {/* Title lockup */}
+        <div
+          className="flex flex-col items-center mb-8"
+          style={{ textShadow: "0 2px 24px rgba(26,20,3,0.8), 0 1px 4px rgba(26,20,3,0.9)" }}
         >
-          Island Party
-        </h1>
-
-        <p
-          className="text-3xl sm:text-4xl lg:text-5xl text-[#cfb358] leading-none tracking-widest mb-6"
-          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
-        >
-          2026
-        </p>
+          <h1
+            className="text-7xl sm:text-8xl lg:text-[10rem] text-[#f5f0e8] leading-none tracking-wide"
+            style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+          >
+            Island Party
+          </h1>
+          <div className="flex items-center gap-3 mt-1 w-full">
+            <span className="flex-1 h-px bg-[#cfb358]/60" />
+            <span
+              className="text-2xl sm:text-3xl lg:text-4xl text-[#cfb358] leading-none tracking-[0.3em]"
+              style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+            >
+              2026
+            </span>
+            <span className="flex-1 h-px bg-[#cfb358]/60" />
+          </div>
+        </div>
 
         {/* Countdown */}
-        <div className="flex items-center gap-6 sm:gap-10 mb-12">
+        <div className="flex items-center gap-4 sm:gap-8 mb-12">
           <CountdownUnit value={days} label="Days" />
-          <span className="text-[#cfb358] text-3xl sm:text-4xl mb-4" style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}>:</span>
+          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
           <CountdownUnit value={hours} label="Hours" />
-          <span className="text-[#cfb358] text-3xl sm:text-4xl mb-4" style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}>:</span>
+          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
           <CountdownUnit value={minutes} label="Minutes" />
-          <span className="text-[#cfb358] text-3xl sm:text-4xl mb-4" style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}>:</span>
+          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
           <CountdownUnit value={seconds} label="Seconds" />
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const links = [
   { label: "Lineup", href: "#lineup" },
@@ -12,61 +12,17 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#1a1403]/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-[#1a1403] shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo + divider + location */}
-          <a href="#top" className="flex items-center gap-4 group">
-            <Image
-              src="/images/logo-transparent.png"
-              alt="Island Party"
-              width={120}
-              height={48}
-              className="h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
-            />
-            <div className="w-px h-10 bg-[#cfb358]/60" />
-            <div className="flex flex-col leading-tight">
-              <span className="text-[#f5f0e8] text-sm font-semibold tracking-wide">Slayter Hill · West Lafayette, IN</span>
-              <span className="text-[#cfb358] text-sm font-semibold tracking-wide">Date TBA</span>
-            </div>
-          </a>
-
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[#f5f0e8] hover:text-[#cfb358] transition-colors text-sm font-medium tracking-wide uppercase"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#tickets"
-              className="ml-2 px-5 py-2 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
-            >
-              Get Tickets
-            </a>
-          </div>
-
-          {/* Mobile hamburger */}
+        <div className="flex items-center justify-between h-28 lg:h-36">
+          {/* Hamburger — always visible left */}
           <button
-            className="md:hidden text-[#f5f0e8] p-2"
+            className="text-[#f5f0e8] p-2 shrink-0"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -76,11 +32,42 @@ export default function Navbar() {
               <span className={`block h-0.5 w-6 bg-current transition-transform ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
             </div>
           </button>
+
+          {/* Centered lockup: logo + divider + location/tagline */}
+          <a href="#top" className="absolute left-1/2 -translate-x-1/2 group flex items-center gap-4 hover:opacity-80 transition-opacity">
+            <Image
+              src="/images/logo-alt.png"
+              alt="Island Party logo"
+              width={160}
+              height={60}
+              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+            />
+            <span className="w-px h-8 bg-[#cfb358]/50 shrink-0" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-[#f5f0e8] text-xs sm:text-sm uppercase tracking-widest whitespace-nowrap">
+                Slayter Hill · West Lafayette, IN
+              </span>
+              <span
+                className="text-[#cfb358] text-sm sm:text-base tracking-wide whitespace-nowrap"
+                style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+              >
+                No Man Is An Island
+              </span>
+            </div>
+          </a>
+
+          {/* Get Tickets — always on right */}
+          <a
+            href="#tickets"
+            className="shrink-0 px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
+          >
+            Get Tickets
+          </a>
         </div>
 
-        {/* Mobile menu */}
+        {/* Dropdown menu — all screen sizes */}
         {menuOpen && (
-          <div className="md:hidden pb-4 border-t border-[#cfb358]/20 mt-1">
+          <div className="pb-4 border-t border-[#cfb358]/20 mt-1">
             {links.map((link) => (
               <a
                 key={link.href}
