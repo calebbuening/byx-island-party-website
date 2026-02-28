@@ -49,7 +49,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background image */}
       <Image
@@ -62,52 +62,42 @@ export default function Hero() {
       />
 
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1403]/55 via-[#1a1403]/40 to-[#1a1403]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1403]/60 via-[#1a1403]/50 to-[#1a1403]" />
 
-      {/* Upper: wordmark logo centered */}
-      <div className="relative z-10 flex justify-center pt-32 sm:pt-36">
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-24 pb-16">
+        {/* Circle logo */}
         <Image
-          src="/images/logo-transparent.png"
-          alt="Island Party — No Man Is An Island"
-          width={400}
-          height={150}
+          src="/images/logo-circle.png"
+          alt="Island Party 2026 logo"
+          width={220}
+          height={220}
           priority
-          className="w-48 sm:w-64 md:w-80 h-auto object-contain drop-shadow-2xl"
+          className="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 object-contain drop-shadow-2xl mb-6"
         />
-      </div>
 
-      {/* Lower: giant title + year + details + countdown + CTAs */}
-      <div className="relative z-10 flex flex-col items-center text-center pb-12 px-2">
-        {/* Giant full-bleed "ISLAND PARTY" */}
+        {/* Headline */}
         <h1
-          className="text-[#f5f0e8] leading-none tracking-tight w-full"
-          style={{
-            fontFamily: "var(--font-bebas, Impact, sans-serif)",
-            fontSize: "clamp(3.5rem, 16vw, 18rem)",
-            lineHeight: 0.9,
-          }}
+          className="text-7xl sm:text-8xl lg:text-[10rem] text-[#f5f0e8] leading-none tracking-wide mb-2"
+          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
         >
           Island Party
         </h1>
 
-        {/* Year */}
         <p
-          className="text-[#cfb358] leading-none tracking-[0.2em] mt-2 mb-6"
-          style={{
-            fontFamily: "var(--font-bebas, Impact, sans-serif)",
-            fontSize: "clamp(1.5rem, 5vw, 5rem)",
-          }}
+          className="text-3xl sm:text-4xl lg:text-5xl text-[#cfb358] leading-none tracking-widest mb-6"
+          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
         >
           2026
         </p>
 
         {/* Event details */}
-        <p className="text-[#f5f0e8]/70 text-xs sm:text-sm uppercase tracking-[0.25em] mb-8">
+        <p className="text-[#f5f0e8]/80 text-sm sm:text-base uppercase tracking-[0.25em] mb-10">
           Slayter Hill &nbsp;·&nbsp; Purdue University &nbsp;·&nbsp; Date TBA
         </p>
 
         {/* Countdown */}
-        <div className="flex items-center gap-5 sm:gap-8 mb-10">
+        <div className="flex items-center gap-6 sm:gap-10 mb-12">
           <CountdownUnit value={days} label="Days" />
           <span className="text-[#cfb358] text-3xl sm:text-4xl mb-4" style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}>:</span>
           <CountdownUnit value={hours} label="Hours" />
@@ -132,13 +122,13 @@ export default function Hero() {
             View Lineup
           </a>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-10">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cfb358" strokeWidth="2">
-          <path d="M12 5v14M5 12l7 7 7-7" />
-        </svg>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cfb358" strokeWidth="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
       </div>
     </section>
   );
