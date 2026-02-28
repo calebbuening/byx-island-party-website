@@ -29,15 +29,20 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <a href="#top" className="flex items-center gap-3 group">
+          {/* Logo + divider + location */}
+          <a href="#top" className="flex items-center gap-4 group">
             <Image
               src="/images/logo-transparent.png"
               alt="Island Party"
-              width={48}
+              width={120}
               height={48}
-              className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              className="h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
             />
+            <div className="w-px h-10 bg-[#cfb358]/60" />
+            <div className="flex flex-col leading-tight">
+              <span className="text-[#f5f0e8] text-sm font-semibold tracking-wide">Slayter Hill · West Lafayette, IN</span>
+              <span className="text-[#cfb358] text-sm font-semibold tracking-wide">Date TBA</span>
+            </div>
           </a>
 
           {/* Desktop nav */}
