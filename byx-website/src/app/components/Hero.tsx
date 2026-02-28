@@ -61,25 +61,21 @@ export default function Hero() {
         sizes="100vw"
       />
 
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1403]/60 via-[#1a1403]/50 to-[#1a1403]" />
+      {/* Dark gradient overlay — heavy at top/bottom, clear in center to reveal the venue photo */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(26,20,3,0.82) 0%, rgba(26,20,3,0.25) 28%, rgba(26,20,3,0.15) 52%, rgba(26,20,3,0.45) 72%, rgba(26,20,3,1) 100%)",
+        }}
+      />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-24 pb-16">
-        {/* Circle logo */}
-        <Image
-          src="/images/logo-circle.png"
-          alt="Island Party 2026 logo"
-          width={220}
-          height={220}
-          priority
-          className="w-36 h-36 sm:w-44 sm:h-44 lg:w-56 lg:h-56 object-contain drop-shadow-2xl mb-6"
-        />
-
         {/* Headline */}
         <h1
           className="text-7xl sm:text-8xl lg:text-[10rem] text-[#f5f0e8] leading-none tracking-wide mb-2"
-          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+          style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: "0 2px 24px rgba(26,20,3,0.8), 0 1px 4px rgba(26,20,3,0.9)" }}
         >
           Island Party
         </h1>
@@ -89,11 +85,6 @@ export default function Hero() {
           style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
         >
           2026
-        </p>
-
-        {/* Event details */}
-        <p className="text-[#f5f0e8]/80 text-sm sm:text-base uppercase tracking-[0.25em] mb-10">
-          Slayter Hill &nbsp;·&nbsp; Purdue University &nbsp;·&nbsp; Date TBA
         </p>
 
         {/* Countdown */}
