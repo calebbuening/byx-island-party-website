@@ -45,7 +45,7 @@ export default function Navbar() {
             <span className="w-px h-8 bg-[#cfb358]/50 shrink-0" />
             <div className="flex flex-col leading-tight">
               <span className="text-[#f5f0e8] text-xs sm:text-sm uppercase tracking-widest">
-                <span className="whitespace-nowrap">Slayter Hill ·</span>{" "}
+                <span className="whitespace-nowrap">Slayter Hill<span className="hidden sm:inline"> ·</span></span>{" "}
                 <span className="whitespace-nowrap">West Lafayette, IN</span>
               </span>
               <span
