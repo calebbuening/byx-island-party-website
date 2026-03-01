@@ -34,7 +34,7 @@ export default function Navbar() {
           </button>
 
           {/* Centered lockup: logo + divider + location/tagline */}
-          <a href="#top" className="absolute left-1/2 -translate-x-1/2 max-w-[calc(100%-5rem)] sm:max-w-none overflow-hidden group flex items-center gap-4 hover:opacity-80 transition-opacity">
+          <a href="#top" className="absolute left-1/2 -translate-x-1/2 group flex items-center gap-4 hover:opacity-80 transition-opacity">
             <Image
               src="/images/logo-alt.png"
               alt="Island Party logo"
