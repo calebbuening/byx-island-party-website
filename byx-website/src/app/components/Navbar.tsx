@@ -40,7 +40,7 @@ export default function Navbar() {
               alt="Island Party logo"
               width={160}
               height={60}
-              className="h-10 sm:h-12 lg:h-14 w-auto object-contain"
+              className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
             />
             <span className="w-px h-8 bg-[#cfb358]/50 shrink-0" />
             <div className="flex flex-col leading-tight">

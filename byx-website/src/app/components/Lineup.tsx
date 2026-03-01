@@ -99,8 +99,8 @@ export default function Lineup() {
 
         {/* Band grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {bands.map((band) => (
-            <BandCard key={band.name} band={band} />
+          {bands.map((band, i) => (
+            <BandCard key={i} band={band} />
           ))}
         </div>
 
