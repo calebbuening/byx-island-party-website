@@ -56,10 +56,10 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Get Tickets — always on right */}
+          {/* Get Tickets — hidden on mobile to avoid overlap with centered lockup */}
           <a
             href="#tickets"
-            className="shrink-0 px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
+            className="hidden sm:block shrink-0 px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
           >
             Get Tickets
           </a>

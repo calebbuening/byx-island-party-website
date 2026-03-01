@@ -49,7 +49,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
     >
       {/* Background image */}
       <Image
@@ -71,7 +71,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-24 pb-16">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 pt-28 pb-8 sm:pb-16">
         {/* Title lockup */}
         <div
           className="flex flex-col items-center mb-8"
@@ -121,13 +121,13 @@ export default function Hero() {
             View Lineup
           </a>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cfb358" strokeWidth="2">
-            <path d="M12 5v14M5 12l7 7 7-7" />
-          </svg>
-        </div>
+      {/* Scroll indicator — anchored to bottom of section */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cfb358" strokeWidth="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
       </div>
     </section>
   );
