@@ -27,16 +27,21 @@ function useCountdown(target: Date) {
   return timeLeft;
 }
 
+const strongShadow = "0 1px 4px rgba(0,0,0,1), 0 0 24px rgba(0,0,0,0.95), 0 2px 8px rgba(0,0,0,0.9)";
+
 function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
       <span
         className="text-4xl sm:text-5xl lg:text-6xl text-[#cfb358] leading-none"
-        style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+        style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: strongShadow }}
       >
         {String(value).padStart(2, "0")}
       </span>
-      <span className="text-[#f5f0e8]/60 text-xs sm:text-sm uppercase tracking-widest mt-1">
+      <span
+        className="text-[#f5f0e8]/80 text-xs sm:text-sm uppercase tracking-widest mt-1"
+        style={{ textShadow: strongShadow }}
+      >
         {label}
       </span>
     </div>
@@ -87,7 +92,7 @@ export default function Hero() {
             <span className="flex-1 h-px bg-[#cfb358]/60" />
             <span
               className="text-2xl sm:text-3xl lg:text-4xl text-[#cfb358] leading-none tracking-[0.3em]"
-              style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+              style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: strongShadow }}
             >
               2026
             </span>
@@ -98,11 +103,11 @@ export default function Hero() {
         {/* Countdown */}
         <div className="flex items-center gap-4 sm:gap-8 mb-12">
           <CountdownUnit value={days} label="Days" />
-          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
+          <span className="text-[#cfb358]/70 text-lg sm:text-xl mb-4" style={{ textShadow: strongShadow }}>·</span>
           <CountdownUnit value={hours} label="Hours" />
-          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
+          <span className="text-[#cfb358]/70 text-lg sm:text-xl mb-4" style={{ textShadow: strongShadow }}>·</span>
           <CountdownUnit value={minutes} label="Minutes" />
-          <span className="text-[#cfb358]/50 text-lg sm:text-xl mb-4">·</span>
+          <span className="text-[#cfb358]/70 text-lg sm:text-xl mb-4" style={{ textShadow: strongShadow }}>·</span>
           <CountdownUnit value={seconds} label="Seconds" />
         </div>
 
