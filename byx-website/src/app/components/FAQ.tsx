@@ -5,15 +5,19 @@ import { useState } from "react";
 const faqs = [
   {
     q: "When and where is Island Party 2026?",
-    a: "Island Party 2026 will be held at Slayter Hill on Purdue University's campus in West Lafayette, Indiana. The exact date and time will be announced soon — follow us on Instagram for updates.",
+    a: "Island Party 2026 will be held at Slayter Hill on Purdue University's campus in West Lafayette, Indiana. Follow @purduebyxislandparty on Instagram for date and time announcements.",
   },
   {
     q: "Is Island Party open to the public, or just Purdue students?",
-    a: "Island Party is open to everyone! While it's a Purdue-hosted event, we welcome students, alumni, and community members from the greater West Lafayette area.",
+    a: "Island Party is open to everyone! While it's hosted by Purdue BYX, we welcome students, alumni, and community members from the greater West Lafayette area.",
   },
   {
     q: "How old do I need to be to attend?",
-    a: "Island Party is an all-ages event. This is a general-admission, alcohol-free music festival open to anyone with a ticket.",
+    a: "Island Party is an 18+ event. All attendees will be required to show a valid photo ID at the gate.",
+  },
+  {
+    q: "What can't I bring?",
+    a: "No bags, backpacks, alcohol, weapons, or outside food and drink are permitted. This is for the safety and enjoyment of all attendees. Small clutches and clear bags may be allowed — check our Instagram for the full list closer to the event.",
   },
   {
     q: "Where do I park?",
@@ -29,15 +33,15 @@ const faqs = [
   },
   {
     q: "Is the venue ADA accessible?",
-    a: "Yes. Slayter Hill is accessible to attendees with disabilities. Please contact us at islandparty@purduebyx.com for specific accommodation requests.",
+    a: "Yes. Slayter Hill is accessible to attendees with disabilities. Please contact us at purduebyx.islandparty@gmail.com for specific accommodation requests.",
   },
   {
     q: "Where does the money go?",
-    a: "All proceeds from ticket sales and sponsorships go directly to our charity partner in West Lafayette. We are committed to full transparency — donation totals will be publicly shared after the event.",
+    a: "All net proceeds from ticket sales and sponsorships go directly to Lafayette Urban Ministry (LUM), serving those in need right here in our community.",
   },
   {
     q: "How can my company become a sponsor?",
-    a: "We'd love to partner with you! Download our sponsor deck on this page or reach out directly to sponsor@purduebyx.com. We offer Gold, Silver, and Bronze partnership tiers with varying benefits.",
+    a: "We'd love to partner with you! Download our sponsor deck on this page or reach out directly to purduebyx.islandparty@gmail.com.",
   },
 ];
 
@@ -94,8 +98,8 @@ export default function FAQ() {
 
         <p className="text-center text-[#f5f0e8]/40 text-sm mt-8">
           Still have questions?{" "}
-          <a href="mailto:islandparty@purduebyx.com" className="text-[#cfb358] hover:underline">
-            islandparty@purduebyx.com
+          <a href="mailto:purduebyx.islandparty@gmail.com" className="text-[#cfb358] hover:underline">
+            purduebyx.islandparty@gmail.com
           </a>
         </p>
       </div>

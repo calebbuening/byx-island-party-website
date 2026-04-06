@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0d0a01]">
@@ -19,21 +17,20 @@ export default function About() {
 
             <div className="space-y-5 text-[#f5f0e8]/70 leading-relaxed text-sm sm:text-base">
               <p>
-                Island Party is Purdue&apos;s premier outdoor music festival, hosted annually by{" "}
-                <span className="text-[#cfb358] font-semibold">Beta Upsilon Chi (BYX)</span> on the
-                iconic slopes of Slayter Hill. What started as a small fraternity event has grown
-                into one of the most anticipated nights on the Purdue social calendar.
+                Island Party is an outdoor music festival at Purdue, hosted by{" "}
+                <a href="https://purduebyx.com" target="_blank" rel="noopener noreferrer" className="text-[#cfb358] font-semibold hover:underline">Beta Upsilon Chi (BYX)</a> on
+                Slayter Hill. We&apos;re bringing live music, community, and purpose together for
+                an unforgettable night under the open sky.
               </p>
               <p>
-                Every year, thousands of Boilermakers gather under the open sky for an unforgettable
-                evening of live music — and more importantly, to make a real difference. Every
-                dollar raised goes directly to{" "}
-                <span className="text-[#cfb358] font-semibold">our local charity partner</span>{" "}
-                right here in West Lafayette.
+                This isn&apos;t just a concert — it&apos;s a chance to make a real difference.
+                All net proceeds go directly to{" "}
+                <a href="https://lumserve.org" target="_blank" rel="noopener noreferrer" className="text-[#cfb358] font-semibold hover:underline">Lafayette Urban Ministry (LUM)</a>,
+                serving those in need right here in our community.
               </p>
               <p>
-                We believe that community, music, and purpose can change lives. Island Party is
-                proof of that. Join us in 2026 for the biggest Island Party yet.
+                Great music, a great cause, and a night you won&apos;t forget. Join us on Slayter
+                Hill in 2026.
               </p>
             </div>
 
@@ -57,16 +54,18 @@ export default function About() {
             </div>
           </div>
 
-          {/* Image side */}
+          {/* Video side */}
           <div className="relative">
             <div className="relative rounded-lg overflow-hidden aspect-[4/3] lg:aspect-[3/4]">
-              <Image
-                src="/images/slayter-hill.png"
-                alt="Slayter Hill during Island Party"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/press-video.mp4" type="video/mp4" />
+              </video>
               {/* Gold frame accent */}
               <div className="absolute inset-0 ring-1 ring-inset ring-[#cfb358]/30 rounded-lg" />
             </div>
@@ -77,9 +76,9 @@ export default function About() {
                 className="text-3xl leading-none"
                 style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
               >
-                All proceeds
+                Net proceeds
               </p>
-              <p className="text-xs uppercase tracking-widest font-bold mt-1">benefit local charity</p>
+              <p className="text-xs uppercase tracking-widest font-bold mt-1">benefit LUM</p>
             </div>
           </div>
         </div>

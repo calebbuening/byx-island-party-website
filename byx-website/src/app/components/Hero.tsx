@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const EVENT_DATE = new Date("2026-04-18T18:00:00"); // placeholder — update when confirmed
+const EVENT_DATE = new Date("2026-05-01T18:00:00");
 
 function useCountdown(target: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });

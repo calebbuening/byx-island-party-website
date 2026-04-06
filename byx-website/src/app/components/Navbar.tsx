@@ -19,7 +19,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 bg-[#1a1403] shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28 lg:h-36">
+        <div className="flex items-center justify-between h-14 lg:h-18">
           {/* Hamburger — always visible left */}
           <button
             className="text-[#f5f0e8] p-2 shrink-0"
@@ -36,11 +36,11 @@ export default function Navbar() {
           {/* Centered lockup: logo + divider + location/tagline */}
           <a href="#top" className="absolute left-1/2 -translate-x-1/2 group flex items-center gap-4 hover:opacity-80 transition-opacity">
             <Image
-              src="/images/logo-alt.png"
+              src="/images/logo.svg"
               alt="Island Party logo"
-              width={160}
-              height={60}
-              className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
+              width={320}
+              height={120}
+              className="h-12 sm:h-14 lg:h-20 w-auto object-contain"
             />
             <span className="w-px h-8 bg-[#cfb358]/50 shrink-0" />
             <div className="flex flex-col leading-tight">

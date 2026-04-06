@@ -1,22 +1,6 @@
-const tiers = [
-  {
-    level: "Gold",
-    color: "border-[#cfb358] bg-[#cfb358]/5",
-    labelColor: "text-[#cfb358]",
-    slots: 3,
-  },
-  {
-    level: "Silver",
-    color: "border-[#a8a8a8] bg-[#a8a8a8]/5",
-    labelColor: "text-[#a8a8a8]",
-    slots: 4,
-  },
-  {
-    level: "Bronze",
-    color: "border-[#b87333] bg-[#b87333]/5",
-    labelColor: "text-[#b87333]",
-    slots: 6,
-  },
+const sponsors: { name: string; logo: string | null; href: string | null }[] = [
+  // Add sponsor logos here as they're confirmed:
+  // { name: "Sponsor Name", logo: "/images/sponsors/sponsor.png", href: "https://sponsor.com" },
 ];
 
 export default function Sponsors() {
@@ -39,42 +23,46 @@ export default function Sponsors() {
           </p>
         </div>
 
-        {/* Sponsor tiers */}
-        <div className="space-y-14 mb-20">
-          {tiers.map((tier) => (
-            <div key={tier.level}>
-              <div className="flex items-center gap-4 mb-6">
-                <div className={`h-px flex-1 ${tier.level === "Gold" ? "bg-[#cfb358]/30" : tier.level === "Silver" ? "bg-[#a8a8a8]/30" : "bg-[#b87333]/30"}`} />
-                <span
-                  className={`text-2xl tracking-widest ${tier.labelColor}`}
-                  style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
-                >
-                  {tier.level} Sponsors
+        {/* Sponsor logos grid */}
+        {sponsors.length > 0 && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-20 items-center justify-items-center">
+            {sponsors.map((sponsor) => {
+              const inner = sponsor.logo ? (
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="max-h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                />
+              ) : (
+                <span className="text-[#f5f0e8]/40 text-xs uppercase tracking-widest">
+                  {sponsor.name}
                 </span>
-                <div className={`h-px flex-1 ${tier.level === "Gold" ? "bg-[#cfb358]/30" : tier.level === "Silver" ? "bg-[#a8a8a8]/30" : "bg-[#b87333]/30"}`} />
-              </div>
+              );
 
-              <div className={`grid gap-4 ${tier.level === "Gold" ? "grid-cols-2 sm:grid-cols-3" : tier.level === "Silver" ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-3 sm:grid-cols-6"}`}>
-                {Array.from({ length: tier.slots }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`flex items-center justify-center rounded border ${tier.color} ${
-                      tier.level === "Gold" ? "h-24 sm:h-28" : tier.level === "Silver" ? "h-20 sm:h-24" : "h-16 sm:h-20"
-                    }`}
-                  >
-                    <span className={`text-xs uppercase tracking-widest ${tier.labelColor} opacity-40`}>
-                      Sponsor
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+              return sponsor.href ? (
+                <a
+                  key={sponsor.name}
+                  href={sponsor.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center h-24 w-full rounded border border-[#cfb358]/15 bg-[#cfb358]/5 px-4 hover:border-[#cfb358]/40 transition-colors"
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div
+                  key={sponsor.name}
+                  className="flex items-center justify-center h-24 w-full rounded border border-[#cfb358]/15 bg-[#cfb358]/5 px-4"
+                >
+                  {inner}
+                </div>
+              );
+            })}
+          </div>
+        )}
 
         {/* Become a sponsor CTA */}
         <div className="relative rounded-xl border border-[#cfb358]/30 bg-gradient-to-br from-[#cfb358]/5 to-transparent p-10 lg:p-16 text-center overflow-hidden">
-          {/* Decorative corner */}
           <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-[#cfb358]/30 rounded-tr-xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-32 h-32 border-b-2 border-l-2 border-[#cfb358]/30 rounded-bl-xl pointer-events-none" />
 
@@ -87,8 +75,7 @@ export default function Sponsors() {
           </h3>
           <p className="text-[#f5f0e8]/60 max-w-2xl mx-auto mb-8 text-sm sm:text-base leading-relaxed">
             Sponsoring Island Party puts your brand in front of thousands of Purdue students and
-            community members — while directly funding a meaningful local cause. Our sponsor packages
-            offer tiered visibility, on-site presence, and digital exposure. Download our sponsor
+            community members — while directly funding a meaningful local cause. Download our sponsor
             deck to learn more.
           </p>
 
@@ -102,7 +89,7 @@ export default function Sponsors() {
               Download Sponsor Deck
             </a>
             <a
-              href="mailto:sponsor@purduebyx.com"
+              href="mailto:purduebyx.islandparty@gmail.com"
               className="px-10 py-4 border-2 border-[#cfb358] text-[#cfb358] font-bold text-sm uppercase tracking-wider rounded hover:bg-[#cfb358]/10 transition-all"
             >
               Contact Us

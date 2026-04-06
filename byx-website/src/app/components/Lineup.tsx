@@ -1,18 +1,20 @@
+import Image from "next/image";
+
 const bands = [
   {
-    name: "HEADLINER TBA",
+    name: "THE BRAYMORES",
     role: "Headliner",
-    genre: "Live Music",
-    bio: "The biggest act of the night — headliner announcement coming soon. Stay tuned to our Instagram for the reveal.",
-    image: null,
+    genre: "Alt/Folk Rock",
+    bio: "Alternative/Folk Rock from Chicago, IL. Their debut LP \"Who You'd Have Been\" dropped in late 2024, receiving considerable underground buzz and cementing their position in the Chicago scene.",
+    image: "/images/braymores-1.jpg",
     large: true,
   },
   {
-    name: "ARTIST TBA",
+    name: "CARDINAL BLOOM",
     role: "Supporting Act",
-    genre: "Live Music",
-    bio: "Our second act brings serious energy to Slayter Hill. Announcement dropping soon.",
-    image: null,
+    genre: "Indie Rock",
+    bio: "Indie Rock from Salt Lake City — one of the birthplaces of the modern Indie Rock genre. Their debut album \"The Only Place I've Ever Known\" encapsulates the nostalgic and bittersweet feeling of better days, yet leaves you a notion there is still so much life ahead to be lived.",
+    image: "/images/cardinal-bloom-1.jpg",
     large: false,
   },
   {
@@ -20,7 +22,7 @@ const bands = [
     role: "Opening Act",
     genre: "Live Music",
     bio: "Kicking off the night right — opener announcement coming soon.",
-    image: null,
+    image: null as string | null,
     large: false,
   },
 ];
@@ -32,21 +34,30 @@ function BandCard({ band }: { band: (typeof bands)[0] }) {
         band.large ? "md:col-span-2 lg:col-span-1" : ""
       }`}
     >
-      {/* Image placeholder */}
+      {/* Image or placeholder */}
       <div
         className={`relative bg-gradient-to-br from-[#2a2003] to-[#0d0a01] flex items-center justify-center overflow-hidden ${
           band.large ? "h-72 sm:h-80 lg:h-96" : "h-56 sm:h-64"
         }`}
       >
-        {/* Palm tree silhouette decorative */}
-        <svg
-          className="w-24 h-24 text-[#cfb358]/15 group-hover:text-[#cfb358]/25 transition-colors duration-300"
-          viewBox="0 0 100 120"
-          fill="currentColor"
-        >
-          <path d="M50 110 L50 60 M50 60 C50 60 30 55 20 40 C30 42 40 50 50 60 M50 60 C50 60 70 55 80 40 C70 42 60 50 50 60 M50 60 C50 60 35 45 35 25 C40 35 45 48 50 60 M50 60 C50 60 65 45 65 25 C60 35 55 48 50 60 M50 60 C50 60 50 40 40 25 C45 38 48 50 50 60" />
-          <rect x="47" y="60" width="6" height="50" rx="3" />
-        </svg>
+        {band.image ? (
+          <Image
+            src={band.image}
+            alt={band.name}
+            fill
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : (
+          <svg
+            className="w-24 h-24 text-[#cfb358]/15 group-hover:text-[#cfb358]/25 transition-colors duration-300"
+            viewBox="0 0 100 120"
+            fill="currentColor"
+          >
+            <path d="M50 110 L50 60 M50 60 C50 60 30 55 20 40 C30 42 40 50 50 60 M50 60 C50 60 70 55 80 40 C70 42 60 50 50 60 M50 60 C50 60 35 45 35 25 C40 35 45 48 50 60 M50 60 C50 60 65 45 65 25 C60 35 55 48 50 60 M50 60 C50 60 50 40 40 25 C45 38 48 50 50 60" />
+            <rect x="47" y="60" width="6" height="50" rx="3" />
+          </svg>
+        )}
 
         {band.large && (
           <span
@@ -92,8 +103,10 @@ export default function Lineup() {
           </h2>
           <div className="mt-4 mx-auto w-16 h-0.5 bg-[#cfb358]" />
           <p className="mt-6 text-[#f5f0e8]/60 max-w-xl mx-auto text-sm sm:text-base">
-            Three incredible acts. One unforgettable night on Slayter Hill. Artist announcements
-            dropping soon — follow us on Instagram to be the first to know.
+            Three incredible acts. One unforgettable night on Slayter Hill. More announcements
+            dropping soon — follow{" "}
+            <a href="https://instagram.com/purduebyxislandparty" target="_blank" rel="noopener noreferrer" className="text-[#cfb358] hover:underline">@purduebyxislandparty</a>{" "}
+            to be the first to know.
           </p>
         </div>
 
