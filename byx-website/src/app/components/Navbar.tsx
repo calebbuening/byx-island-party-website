@@ -40,10 +40,10 @@ export default function Navbar() {
               alt="Island Party logo"
               width={320}
               height={120}
-              className="h-12 sm:h-14 lg:h-20 w-auto object-contain"
+              className="h-10 sm:h-12 lg:h-20 w-auto object-contain"
             />
-            <span className="w-px h-8 bg-[#cfb358]/50 shrink-0" />
-            <div className="flex flex-col leading-tight">
+            <span className="hidden lg:block w-px h-8 bg-[#cfb358]/50 shrink-0" />
+            <div className="hidden lg:flex flex-col leading-tight">
               <span className="text-[#f5f0e8] text-xs sm:text-sm uppercase tracking-widest">
                 <span className="whitespace-nowrap">Slayter Hill<span className="hidden sm:inline"> ·</span></span>{" "}
                 <span className="whitespace-nowrap">West Lafayette, IN</span>
@@ -57,8 +57,20 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* CTA buttons — hidden on mobile to avoid overlap with centered lockup */}
-          <div className="hidden sm:flex items-center gap-2 shrink-0">
+          {/* Media Pass — mobile/tablet compact version */}
+          <div className="flex lg:hidden items-center shrink-0">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdzv4nBBv224eoAPZGFxbd6r_Luf5xiwfUse63z34-EEIra-Q/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 border border-[#cfb358] text-[#cfb358] font-bold rounded-full text-[10px] uppercase tracking-wider hover:bg-[#cfb358]/10 transition-colors"
+            >
+              Media Pass
+            </a>
+          </div>
+
+          {/* CTA buttons — hidden on smaller screens to avoid overlap, visible on lg+ */}
+          <div className="hidden lg:flex items-center gap-2 shrink-0">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSdzv4nBBv224eoAPZGFxbd6r_Luf5xiwfUse63z34-EEIra-Q/viewform"
               target="_blank"
@@ -81,6 +93,17 @@ export default function Navbar() {
         {/* Dropdown menu — all screen sizes */}
         {menuOpen && (
           <div className="pb-4 border-t border-[#cfb358]/20 mt-1">
+            <div className="xl:hidden py-4 px-2 border-b border-[#cfb358]/10 mb-2">
+              <div className="text-[#f5f0e8] text-[10px] uppercase tracking-[0.2em]">
+                Slayter Hill · West Lafayette, IN
+              </div>
+              <div
+                className="text-[#cfb358] text-lg tracking-wide mt-1"
+                style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
+              >
+                No Man Is An Island
+              </div>
+            </div>
             {links.map((link) => (
               <a
                 key={link.href}
