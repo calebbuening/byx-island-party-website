@@ -23,7 +23,6 @@ export default function About() {
                 an unforgettable night under the open sky.
               </p>
               <p>
-                This isn&apos;t just a concert — it&apos;s a chance to make a real difference.
                 All net proceeds go directly to{" "}
                 <a href="https://lumserve.org" target="_blank" rel="noopener noreferrer" className="text-[#cfb358] font-semibold hover:underline">Lafayette Urban Ministry (LUM)</a>,
                 serving those in need right here in our community.
