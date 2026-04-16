@@ -26,3 +26,16 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes splash {
+  0%, 100% {
+    transform: rotate(8deg) scale(1);
+  }
+  50% {
+    transform: rotate(8deg) scale(1.15);
+  }
+}
+
+.animate-splash {
+  animation: splash 0.8s ease-in-out infinite;
+}

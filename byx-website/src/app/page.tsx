@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Lineup from "./components/Lineup";
-import Tickets from "./components/Tickets";
 import Playlist from "./components/Playlist";
 import About from "./components/About";
 import FAQ from "./components/FAQ";
@@ -13,7 +12,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Lineup />
-      <Tickets />
       <Playlist />
       <About />
       <FAQ />

@@ -100,6 +100,21 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* Splash date — Minecraft style */}
+        <div className="relative w-full mb-6">
+          <p
+            className="absolute -right-20 sm:-right-28 lg:-right-36 -top-16 sm:-top-20 lg:-top-24 text-[#cfb358] text-4xl sm:text-5xl lg:text-7xl font-bold"
+            style={{
+              fontFamily: "var(--font-bebas, Impact, sans-serif)",
+              textShadow: strongShadow,
+              transform: "rotate(8deg)",
+              transformOrigin: "center center",
+            }}
+          >
+            May 1st, 2026!
+          </p>
+        </div>
+
         {/* Countdown */}
         <div className="flex items-center gap-4 sm:gap-8 mb-12">
           <CountdownUnit value={days} label="Days" />
@@ -111,17 +126,6 @@ export default function Hero() {
           <CountdownUnit value={seconds} label="Seconds" />
         </div>
 
-        {/* CTA */}
-        <div>
-          <a
-            href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block w-full sm:w-auto sm:min-w-[340px] text-center px-10 py-4 bg-[#cfb358] text-[#1a1403] font-bold text-lg uppercase tracking-wider rounded hover:bg-[#e8c96a] transition-all hover:scale-105 shadow-lg"
-          >
-            Get Tickets
-          </a>
-        </div>
       </div>
 
       {/* Scroll indicator — anchored to bottom of section */}

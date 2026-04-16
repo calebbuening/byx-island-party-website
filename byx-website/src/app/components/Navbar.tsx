@@ -6,7 +6,6 @@ import { useState } from "react";
 const links = [
   { label: "Lineup", href: "#lineup" },
   { label: "About", href: "#about" },
-  { label: "Tickets", href: "#tickets" },
 
   { label: "FAQ", href: "#faq" },
 ];
@@ -79,14 +78,6 @@ export default function Navbar() {
             >
               Media Pass
             </a>
-            <a
-              href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
-            >
-              Get Tickets
-            </a>
           </div>
         </div>
 
@@ -122,15 +113,6 @@ export default function Navbar() {
               className="mt-3 block text-center px-5 py-2.5 border border-[#cfb358] text-[#cfb358] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#cfb358]/10 transition-colors"
             >
               Media Pass
-            </a>
-            <a
-              href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMenuOpen(false)}
-              className="mt-2 block text-center px-5 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
-            >
-              Get Tickets
             </a>
           </div>
         )}
