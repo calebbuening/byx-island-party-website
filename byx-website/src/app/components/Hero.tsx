@@ -111,19 +111,13 @@ export default function Hero() {
           <CountdownUnit value={seconds} label="Seconds" />
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        {/* CTA */}
+        <div>
           <a
             href="#tickets"
-            className="px-10 py-4 bg-[#cfb358] text-[#1a1403] font-bold text-lg uppercase tracking-wider rounded hover:bg-[#e8c96a] transition-all hover:scale-105 shadow-lg"
+            className="inline-block w-full sm:w-auto sm:min-w-[340px] text-center px-10 py-4 bg-[#cfb358] text-[#1a1403] font-bold text-lg uppercase tracking-wider rounded hover:bg-[#e8c96a] transition-all hover:scale-105 shadow-lg"
           >
             Get Tickets
-          </a>
-          <a
-            href="#lineup"
-            className="px-10 py-4 border-2 border-[#cfb358] text-[#cfb358] font-bold text-lg uppercase tracking-wider rounded hover:bg-[#cfb358]/10 transition-all"
-          >
-            View Lineup
           </a>
         </div>
       </div>
