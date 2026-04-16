@@ -1,9 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Lineup from "./components/Lineup";
+import Playlist from "./components/Playlist";
 import About from "./components/About";
-import Tickets from "./components/Tickets";
-import Sponsors from "./components/Sponsors";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
@@ -13,9 +12,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Lineup />
+      <Playlist />
       <About />
-      <Tickets />
-      <Sponsors />
       <FAQ />
       <Footer />
     </main>

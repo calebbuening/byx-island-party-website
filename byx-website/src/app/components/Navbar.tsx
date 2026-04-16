@@ -7,7 +7,7 @@ const links = [
   { label: "Lineup", href: "#lineup" },
   { label: "About", href: "#about" },
   { label: "Tickets", href: "#tickets" },
-  { label: "Sponsors", href: "#sponsors" },
+
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -57,13 +57,23 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Get Tickets — hidden on mobile to avoid overlap with centered lockup */}
-          <a
-            href="#tickets"
-            className="hidden sm:block shrink-0 px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
-          >
-            Get Tickets
-          </a>
+          {/* CTA buttons — hidden on mobile to avoid overlap with centered lockup */}
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdzv4nBBv224eoAPZGFxbd6r_Luf5xiwfUse63z34-EEIra-Q/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 border border-[#cfb358] text-[#cfb358] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#cfb358]/10 transition-colors"
+            >
+              Media Pass
+            </a>
+            <a
+              href="#tickets"
+              className="px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
+            >
+              Get Tickets
+            </a>
+          </div>
         </div>
 
         {/* Dropdown menu — all screen sizes */}
@@ -80,9 +90,18 @@ export default function Navbar() {
               </a>
             ))}
             <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdzv4nBBv224eoAPZGFxbd6r_Luf5xiwfUse63z34-EEIra-Q/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="mt-3 block text-center px-5 py-2.5 border border-[#cfb358] text-[#cfb358] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#cfb358]/10 transition-colors"
+            >
+              Media Pass
+            </a>
+            <a
               href="#tickets"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 block text-center px-5 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
+              className="mt-2 block text-center px-5 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
             >
               Get Tickets
             </a>

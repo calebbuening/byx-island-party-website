@@ -2,27 +2,27 @@ import Image from "next/image";
 
 const bands = [
   {
-    name: "THE BRAYMORES",
-    role: "Headliner",
-    genre: "Alt/Folk Rock",
-    bio: "Alternative/Folk Rock from Chicago, IL. Their debut LP \"Who You'd Have Been\" dropped in late 2024, receiving considerable underground buzz and cementing their position in the Chicago scene.",
-    image: "/images/braymores-1.jpg",
-    large: true,
-  },
-  {
     name: "CARDINAL BLOOM",
-    role: "Supporting Act",
+    role: "Headliner",
     genre: "Indie Rock",
     bio: "Indie Rock from Salt Lake City — one of the birthplaces of the modern Indie Rock genre. Their debut album \"The Only Place I've Ever Known\" encapsulates the nostalgic and bittersweet feeling of better days, yet leaves you a notion there is still so much life ahead to be lived.",
     image: "/images/cardinal-bloom-1.jpg",
+    large: true,
+  },
+  {
+    name: "THE BRAYMORES",
+    role: "Supporting Act",
+    genre: "Alt/Folk Rock",
+    bio: "Alternative/Folk Rock from Chicago, IL. Their debut LP \"Who You'd Have Been\" dropped in late 2024, receiving considerable underground buzz and cementing their position in the Chicago scene.",
+    image: "/images/braymores-1.jpg",
     large: false,
   },
   {
-    name: "ARTIST TBA",
+    name: "THE YELLOW COUCH",
     role: "Opening Act",
-    genre: "Live Music",
-    bio: "Kicking off the night right — opener announcement coming soon.",
-    image: null as string | null,
+    genre: "Indie Rock",
+    bio: "Indie Rock born in the dorms of Taylor University in Upland, Indiana. Their debut EP \"Waiting Room\" captures the bittersweet rush of growing up — turning late-night jams and avoided homework into something worth hearing.",
+    image: "/images/artist-tba.png",
     large: false,
   },
 ];

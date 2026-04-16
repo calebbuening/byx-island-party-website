@@ -16,7 +16,7 @@ const links = [
   { label: "Lineup", href: "#lineup" },
   { label: "About", href: "#about" },
   { label: "Tickets", href: "#tickets" },
-  { label: "Sponsors", href: "#sponsors" },
+
   { label: "FAQ", href: "#faq" },
 ];
 
