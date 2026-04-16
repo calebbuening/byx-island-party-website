@@ -68,7 +68,9 @@ export default function Navbar() {
               Media Pass
             </a>
             <a
-              href="#tickets"
+              href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
             >
               Get Tickets
@@ -99,7 +101,9 @@ export default function Navbar() {
               Media Pass
             </a>
             <a
-              href="#tickets"
+              href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="mt-2 block text-center px-5 py-2.5 bg-[#cfb358] text-[#1a1403] font-bold rounded text-sm uppercase tracking-wide hover:bg-[#e8c96a] transition-colors"
             >

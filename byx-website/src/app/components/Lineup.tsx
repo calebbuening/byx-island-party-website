@@ -117,10 +117,20 @@ export default function Lineup() {
           ))}
         </div>
 
-        {/* More info note */}
-        <p className="text-center text-[#f5f0e8]/40 text-sm mt-10">
-          Full schedule &amp; set times announced closer to the event.
-        </p>
+        {/* More info note & CTA */}
+        <div className="mt-16 flex flex-col items-center gap-6">
+          <p className="text-center text-[#f5f0e8]/40 text-sm">
+            Full schedule & set times announced closer to the event.
+          </p>
+          <a
+            href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3.5 bg-[#cfb358] text-[#1a1403] font-bold text-sm uppercase tracking-wider rounded hover:bg-[#e8c96a] transition-all hover:scale-105 shadow-lg"
+          >
+            Get Tickets
+          </a>
+        </div>
       </div>
     </section>
   );

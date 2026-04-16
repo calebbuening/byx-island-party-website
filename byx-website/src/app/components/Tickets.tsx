@@ -13,15 +13,14 @@ export default function Tickets() {
           </h2>
           <div className="mt-4 mx-auto w-16 h-0.5 bg-[#cfb358]" />
           <p className="mt-6 text-[#f5f0e8]/60 max-w-lg mx-auto text-sm sm:text-base">
-            Ticket pricing and on-sale dates will be announced soon. Follow our Instagram to be
-            first in line when tickets drop.
+            Get your tickets now for the biggest event on Slayter Hill. All proceeds benefit the Lafayette Urban Ministry.
           </p>
         </div>
 
         {/* Urgency banner */}
         <div className="mb-10 text-center">
           <span className="inline-block px-6 py-2.5 bg-[#cfb358]/10 border border-[#cfb358]/40 text-[#cfb358] text-sm uppercase tracking-widest rounded-full">
-            Tickets on Sale Soon — Follow @PurdueBYX for Updates
+            Tickets Now Available — Get Yours Today
           </span>
         </div>
 
@@ -39,7 +38,7 @@ export default function Tickets() {
               className="text-5xl mb-4 text-[#cfb358]"
               style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)" }}
             >
-              TBA
+              $15
             </p>
 
             <p className="text-sm mb-6 leading-relaxed text-[#f5f0e8]/60">
@@ -69,9 +68,10 @@ export default function Tickets() {
             </ul>
 
             <a
-              href="#"
-              aria-disabled="true"
-              className="block text-center py-3.5 rounded font-bold text-sm uppercase tracking-wider transition-all bg-[#cfb358]/10 border border-[#cfb358]/40 text-[#cfb358] hover:bg-[#cfb358]/20"
+              href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center py-3.5 rounded font-bold text-sm uppercase tracking-wider transition-all bg-[#cfb358] text-[#1a1403] hover:bg-[#e8c96a]"
             >
               Get Tickets
             </a>

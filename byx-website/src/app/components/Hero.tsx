@@ -114,7 +114,9 @@ export default function Hero() {
         {/* CTA */}
         <div>
           <a
-            href="#tickets"
+            href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block w-full sm:w-auto sm:min-w-[340px] text-center px-10 py-4 bg-[#cfb358] text-[#1a1403] font-bold text-lg uppercase tracking-wider rounded hover:bg-[#e8c96a] transition-all hover:scale-105 shadow-lg"
           >
             Get Tickets
