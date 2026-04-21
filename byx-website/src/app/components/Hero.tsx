@@ -91,10 +91,10 @@ export default function Hero() {
           <div className="flex items-center gap-3 mt-1 w-full">
             <span className="flex-1 h-px bg-[#cfb358]/60" />
             <span
-              className="text-2xl sm:text-3xl lg:text-4xl text-[#cfb358] leading-none tracking-[0.3em]"
+              className="text-2xl sm:text-3xl lg:text-4xl text-[#cfb358] leading-none tracking-[0.3em] whitespace-nowrap"
               style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: strongShadow }}
             >
-              2026
+              May 1st · 7:00 PM
             </span>
             <span className="flex-1 h-px bg-[#cfb358]/60" />
           </div>
@@ -112,7 +112,7 @@ export default function Hero() {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col items-center">
+        <div>
           <a
             href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
             target="_blank"
@@ -121,12 +121,6 @@ export default function Hero() {
           >
             Get Tickets
           </a>
-          <p
-            className="mt-4 text-[#f5f0e8] text-sm sm:text-base uppercase tracking-[0.25em]"
-            style={{ textShadow: strongShadow }}
-          >
-            May 1st · 7:00 PM
-          </p>
         </div>
       </div>
 
