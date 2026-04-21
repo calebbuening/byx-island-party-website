@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="flex items-center gap-3 mt-1 w-full">
             <span className="flex-1 h-px bg-[#cfb358]/60" />
             <span
-              className="text-2xl sm:text-3xl lg:text-4xl text-[#cfb358] leading-none tracking-[0.3em] whitespace-nowrap"
+              className="text-2xl sm:text-3xl lg:text-4xl text-[#f5f0e8] leading-none tracking-[0.3em] whitespace-nowrap"
               style={{ fontFamily: "var(--font-bebas, Impact, sans-serif)", textShadow: strongShadow }}
             >
               May 1st · 7:00 PM
