@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const EVENT_DATE = new Date("2026-05-01T18:00:00");
+const EVENT_DATE = new Date("2026-05-01T19:00:00-04:00");
 
 function useCountdown(target: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -112,7 +112,7 @@ export default function Hero() {
         </div>
 
         {/* CTA */}
-        <div>
+        <div className="flex flex-col items-center">
           <a
             href="https://am.ticketmaster.com/purdue/buy/ism/QllYUEFSVFk="
             target="_blank"
@@ -121,6 +121,12 @@ export default function Hero() {
           >
             Get Tickets
           </a>
+          <p
+            className="mt-4 text-[#f5f0e8] text-sm sm:text-base uppercase tracking-[0.25em]"
+            style={{ textShadow: strongShadow }}
+          >
+            May 1st · 7:00 PM
+          </p>
         </div>
       </div>
 
