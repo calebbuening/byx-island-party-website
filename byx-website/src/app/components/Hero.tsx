@@ -66,13 +66,12 @@ export default function Hero() {
         sizes="100vw"
       />
 
-      {/* Dark gradient overlay — warm/clear down to viewport bottom (or arrow if section is taller),
-          then sharp transition to solid dark so the hero merges with the Lineup section. */}
+      {/* Dark gradient overlay — warm/clear down to just below the arrow, then pure black. */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(26,20,3,0.82) 0%, rgba(26,20,3,0.25) 28%, rgba(26,20,3,0.15) 52%, rgba(26,20,3,0.15) calc(max(100svh, 100% - 32px) - 16px), rgba(26,20,3,1) max(100svh, calc(100% - 32px)))",
+            "linear-gradient(to bottom, rgba(26,20,3,0.82) 0%, rgba(26,20,3,0.25) 28%, rgba(26,20,3,0.15) 52%, rgba(26,20,3,0.15) calc(100% - 28px), rgb(0,0,0) 100%)",
         }}
       />
 

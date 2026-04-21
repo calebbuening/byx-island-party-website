@@ -90,7 +90,7 @@ function BandCard({ band }: { band: (typeof bands)[0] }) {
 
 export default function Lineup() {
   return (
-    <section id="lineup" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#1a1403]">
+    <section id="lineup" className="py-24 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">

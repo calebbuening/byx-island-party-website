@@ -1,6 +1,6 @@
 export default function Playlist() {
   return (
-    <section id="playlist" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#1a1403]">
+    <section id="playlist" className="py-24 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-[#cfb358] text-xs uppercase tracking-[0.3em] mb-3">

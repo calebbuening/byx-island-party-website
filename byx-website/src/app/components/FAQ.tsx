@@ -77,7 +77,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#1a1403]">
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-[#cfb358] text-xs uppercase tracking-[0.3em] mb-3">Got Questions?</p>
